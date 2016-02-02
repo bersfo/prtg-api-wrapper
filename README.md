@@ -8,4 +8,4 @@ To use it simply make the functions available through:
 `. "<path-to>\prtg-functions.ps1"`
 
 ## Example
-[worker.ps1]() shows how to do that as an example.
+[worker.ps1](https://github.com/bersfo/prtg-api-wrapper/blob/master/worker.ps1) shows how to do that as an example.
