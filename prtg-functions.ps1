@@ -93,3 +93,16 @@ Process {
     $POSTnewName = 'https://' + $apihost + '/api/rename.htm?id=' + $objid + '&value=' + $newSensorName + '&username=' + $username + '&passhash=' + $passhash
     Invoke-RestMethod -Uri $POSTnewName
 }}
+
+function remove-sensor {
+
+[cmdletbinding()]
+Param (
+    
+    [int]$objid
+)
+
+Process {
+    $POSTremoveSensor = 'https://' + $apihost + '/api/deleteobject.htm?id=' + $objid + '&approve=1' + '&username=' + $username + '&passhash=' + $passhash
+    Invoke-RestMethod -Uri $POSTremoveSensor
+}}
