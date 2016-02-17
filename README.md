@@ -16,6 +16,10 @@ paremeter 1: $objid --- ID of the sensor that you would like to rename
 
 parameter 2: $newSensorName --- The new name for the sensor
 
+**function: remove-sensor**
+
+paremeter 1: $objid --- ID of the sensor that you would like to remove
+
 ## How to use it
 To use it simply make the functions available through:
 
