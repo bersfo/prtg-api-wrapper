@@ -67,7 +67,7 @@ Param (
 
 Process {
     
-    if ($sensorType -eq $null) {
+    if (!$sensorType) {
         $getTableCall = 'https://' + $apihost + '/api/table.xml?content=sensors&columns=objid,sensor,type,device&id=' + $treeObject + '&username=' + $username + '&passhash=' + $passhash
     }
     else {
