@@ -62,16 +62,16 @@ function list-sensors {
 [cmdletbinding()]
 Param (
     [int]$treeObject, 
-    [string]$sensorType
+    [string]$sensorTypeRaw
 )
 
 Process {
     
-    if (!$sensorType) {
+    if (!$sensorTypeRaw) {
         $getTableCall = 'https://' + $apihost + '/api/table.xml?content=sensors&columns=objid,sensor,type,device&id=' + $treeObject + '&username=' + $username + '&passhash=' + $passhash
     }
     else {
-        $getTableCall = 'https://' + $apihost + '/api/table.xml?content=sensors&columns=objid,sensor,type,device&filter_type=' + $sensorType + '&id=' + $treeObject + '&username=' + $username + '&passhash=' + $passhash
+        $getTableCall = 'https://' + $apihost + '/api/table.xml?content=sensors&columns=objid,sensor,type,device&filter_type=' + $sensorTypeRaw + '&id=' + $treeObject + '&username=' + $username + '&passhash=' + $passhash
     }
     [xml]$SensorTable = Invoke-RestMethod -Uri $getTableCall
 
