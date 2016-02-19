@@ -6,11 +6,11 @@ So far the following functions are included:
 
 ## Device Functions
 
-**function: list-devices** --- returns [xml]$deviceTable
+**list-devices** --- returns [xml]$deviceTable
 
 parameter 1: $treeObject --- ID of the tree-object, which childs you'd like to enumerate
 
-**function: clone-device** --- clones a device
+**clone-device** --- clones a device
 
 parameter 1: $masterDeviceID --- ID of the device you want to create a clone from
 
@@ -20,35 +20,35 @@ parameter 3: $newDeviceHostname --- Hostname/IP of the new device
 
 parameter 4: $newDeviceGroupID --- Group in which you'd like the new device to be created in
 
-**function: resume-device** --- resumes (un-pause) all sensors of a device
+**resume-device** --- resumes (un-pause) all sensors of a device
 
 parameter 1: $deviceID --- ID of the device you'd like to resume
 
 ## Sensor Functions
 
-**function: list-sensors** --- returns [xml]$SensorTable
+**list-sensors** --- returns [xml]$SensorTable
 
 parameter 1: $treeObject --- ID of the tree-object which childs you'd like to enumerate
 
 parameter 2: $sensorType --- String that describes the Sensor type that you are looking for (i.e. 'Ping')
 
-**function: rename-sensor**
+**rename-sensor**
 
 paremeter 1: $objid --- ID of the sensor that you would like to rename
 
 parameter 2: $newSensorName --- The new name for the sensor
 
-**function: set-sensor-priority**
+**set-sensor-priority**
 
 paremeter 1: $objid --- ID of the sensor that you would like to change the priority of
 
 parameter 2: $newSensorPriority --- The new priority for the sensor
 
-**function: remove-sensor**
+**remove-sensor**
 
 paremeter 1: $objid --- ID of the sensor that you would like to remove
 
-**function: pause-sensor**
+**pause-sensor**
 
 paremeter 1: $sensorID --- ID of the sensor that you would like to pause
 
