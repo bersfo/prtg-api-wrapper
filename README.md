@@ -4,6 +4,20 @@ The Powershell scripts in this repository provide a wrapper for the [PRTG API](h
 
 So far the following functions are included:
 
+**function: list-devices** --- returns [xml]$deviceTable
+
+parameter 1: $treeObject --- ID of the tree-object, which childs you'd like to enumerate
+
+**function: clone-device** --- clones a device
+
+parameter 1: $masterDeviceID --- ID of the device you want to create a clone from
+
+parameter 2: $newDeviceName --- Name of the new device
+
+parameter 3: $newDeviceHostname --- Hostname/IP of the new device
+
+parameter 4: $newDeviceGroupID --- Group in which you'd like the new device to be created in
+
 **function: list-sensors** --- returns [xml]$SensorTable
 
 parameter 1: $treeObject --- ID of the tree-object which childs you'd like to enumerate
