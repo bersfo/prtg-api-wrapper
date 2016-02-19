@@ -9,6 +9,6 @@
 # --
 
 
-# list sensors from device tree
-$sensorList = list-sensors 2002 "Ping"
+# list all (max 50k) Ping sensors from device tree
+$sensorList = list-sensors 0 "Ping"
 WriteXmlToScreen($sensorList)
