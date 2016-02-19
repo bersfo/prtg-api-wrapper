@@ -4,6 +4,8 @@ The Powershell scripts in this repository provide a wrapper for the [PRTG API](h
 
 So far the following functions are included:
 
+## Device Functions
+
 **function: list-devices** --- returns [xml]$deviceTable
 
 parameter 1: $treeObject --- ID of the tree-object, which childs you'd like to enumerate
@@ -18,6 +20,12 @@ parameter 3: $newDeviceHostname --- Hostname/IP of the new device
 
 parameter 4: $newDeviceGroupID --- Group in which you'd like the new device to be created in
 
+**function: resume-device** --- resumes (un-pause) all sensors of a device
+
+parameter 1: $deviceID --- ID of the device you'd like to resume
+
+## Sensor Functions
+
 **function: list-sensors** --- returns [xml]$SensorTable
 
 parameter 1: $treeObject --- ID of the tree-object which childs you'd like to enumerate
@@ -30,9 +38,19 @@ paremeter 1: $objid --- ID of the sensor that you would like to rename
 
 parameter 2: $newSensorName --- The new name for the sensor
 
+**function: set-sensor-priority**
+
+paremeter 1: $objid --- ID of the sensor that you would like to change the priority of
+
+parameter 2: $newSensorPriority --- The new priority for the sensor
+
 **function: remove-sensor**
 
 paremeter 1: $objid --- ID of the sensor that you would like to remove
+
+**function: pause-sensor**
+
+paremeter 1: $sensorID --- ID of the sensor that you would like to pause
 
 ## How to use it
 To use it simply make the functions available through:
